@@ -27,3 +27,11 @@ This repository contains cryptographic evidence that the LJX Core mathematical e
 - **File:** `7_Topological_Anomaly_Proof.json`
 - **Status:** `VERIFIED`
 - **Proof:** Computes exact persistent homology, Hodge decomposition, and Sheaf Laplacian eigenvalues to find structural anomalies.
+
+## 9. Hodge Engine V2 (Mechanistic Interpretability)
+- **File:** `9_Hodge_Engine_Audit.txt`
+- **Proof:** Exact Hodge decomposition of chain complexes with 0.0 boundary closure error.
+
+## 10. Odom (Cryptographic Experiment Provenance)
+- **File:** `10_Odom_Tamper_Proof.txt`
+- **Proof:** 19/19 tests passed. Detects tampering and refuses overwrites using SHA-256.

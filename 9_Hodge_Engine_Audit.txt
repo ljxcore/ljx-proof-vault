@@ -1,0 +1,595 @@
+================================================================
+HODGE ENGINE V2 AUDIT
+================================================================
+OBSERVATION finite                      : PASS
+REPRESENTATION created                  : PASS
+BOUNDARY NORM: 0.0
+BOUNDARY d^2 = 0                        : PASS
+HARMONIC ERROR: 0.0
+HARMONIC Delta h                        : PASS
+HARMONIC d h = 0                        : PASS
+HARMONIC delta h = 0                    : PASS
+RESIDUAL produced                       : PASS
+TRANSFER CANDIDATES: 7
+BEST TRANSFER: identity
+TRANSFER candidates >= 3                : PASS
+RECONSTRUCTION produced                 : PASS
+INTERVENTION produced                   : PASS
+FULL PIPELINE status                    : PASS
+JSON SERIALIZATION                      : PASS
+================================================================
+AUDIT SUMMARY
+================================================================
+{
+  "audit_version": "HODGE-ENGINE-V2-AUDIT-FIX2",
+  "engine_version": "UNKNOWN",
+  "status": "PASS",
+  "failures": [],
+  "checks": {
+    "observation": {
+      "state": "OBSERVATION",
+      "shape": [
+        3
+      ],
+      "contexts": [
+        "benchmark",
+        "audit_version"
+      ],
+      "norm": 3.7416573867739413,
+      "finite": true,
+      "data_sha256": "ee7f5097ae37ace00a4fa95dcf879678075b80e7fad4782d0570f6582fa4a274",
+      "object": [
+        2.0,
+        -1.0,
+        3.0
+      ]
+    },
+    "representation": {
+      "state": "REPRESENTATION",
+      "representation_type": "finite_chain_complex",
+      "ambient_dimension": 3,
+      "B1_shape": [
+        3,
+        3
+      ],
+      "B2_shape": [
+        3,
+        1
+      ],
+      "object": [
+        2.0,
+        -1.0,
+        3.0
+      ],
+      "B1": [
+        [
+          -1.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "B2": [
+        [
+          1.0
+        ],
+        [
+          -1.0
+        ],
+        [
+          1.0
+        ]
+      ]
+    },
+    "boundary": {
+      "state": "BOUNDARY",
+      "valid": true,
+      "closure_norm": 0.0,
+      "rank_B1": 2,
+      "rank_B2": 1,
+      "B1B2": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ]
+      ]
+    },
+    "decomposition": {
+      "state": "DECOMPOSITION",
+      "L_down": [
+        [
+          2.0,
+          1.0,
+          -1.0
+        ],
+        [
+          1.0,
+          2.0,
+          1.0
+        ],
+        [
+          -1.0,
+          1.0,
+          2.0
+        ]
+      ],
+      "L_up": [
+        [
+          1.0,
+          -1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        [
+          1.0,
+          -1.0,
+          1.0
+        ]
+      ],
+      "laplacian": [
+        [
+          3.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.0
+        ]
+      ],
+      "eigenvalues": [
+        3.0,
+        3.0,
+        3.0
+      ],
+      "eigenvectors": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "harmonic_dimension": 0,
+      "harmonic_basis": [
+        [],
+        [],
+        []
+      ]
+    },
+    "harmonic": {
+      "state": "HARMONIC",
+      "harmonic": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "harmonic_dimension": 0,
+      "closed_error": 0.0,
+      "coclosed_error": 0.0,
+      "harmonic_error": 0.0,
+      "projection_fraction": 0.0
+    },
+    "residual": {
+      "state": "RESIDUAL",
+      "residual": [
+        2.0,
+        -1.0,
+        3.0
+      ],
+      "residual_norm": 3.7416573867739413,
+      "relative_residual": 1.0,
+      "explained_norm": 0.0,
+      "gap_sha256": "ee7f5097ae37ace00a4fa95dcf879678075b80e7fad4782d0570f6582fa4a274"
+    },
+    "transfers": {
+      "state": "TRANSFER",
+      "candidate_count": 7,
+      "selection_rule": "minimum normalized fixed-point residual",
+      "candidates": [
+        {
+          "name": "identity",
+          "score": 0.0,
+          "fixed_error": 0.0,
+          "eigen_error_pm": 0.0,
+          "cosine": 1.0,
+          "output_norm": 3.7416573867739413,
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "reverse",
+          "score": 0.37796447300922725,
+          "fixed_error": 0.37796447300922725,
+          "eigen_error_pm": 0.37796447300922725,
+          "cosine": 0.9285714285714286,
+          "output_norm": 3.7416573867739413,
+          "matrix": [
+            [
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "name": "swap_0_1",
+          "score": 1.1338934190276817,
+          "fixed_error": 1.1338934190276817,
+          "eigen_error_pm": 1.1338934190276817,
+          "cosine": 0.35714285714285715,
+          "output_norm": 3.7416573867739413,
+          "matrix": [
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "name": "cycle_1",
+          "score": 1.3627702877384937,
+          "fixed_error": 1.3627702877384937,
+          "eigen_error_pm": 1.3627702877384937,
+          "cosine": 0.07142857142857142,
+          "output_norm": 3.7416573867739413,
+          "matrix": [
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              1.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "name": "cycle_2",
+          "score": 1.3627702877384937,
+          "fixed_error": 1.3627702877384937,
+          "eigen_error_pm": 1.3627702877384937,
+          "cosine": 0.07142857142857142,
+          "output_norm": 3.7416573867739413,
+          "matrix": [
+            [
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "name": "swap_1_2",
+          "score": 1.511857892036909,
+          "fixed_error": 1.511857892036909,
+          "eigen_error_pm": 1.3093073414159542,
+          "cosine": -0.14285714285714285,
+          "output_norm": 3.7416573867739413,
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "name": "global_sign",
+          "score": 2.0,
+          "fixed_error": 2.0,
+          "eigen_error_pm": 0.0,
+          "cosine": -1.0,
+          "output_norm": 3.7416573867739413,
+          "matrix": [
+            [
+              -1.0,
+              -0.0,
+              -0.0
+            ],
+            [
+              -0.0,
+              -1.0,
+              -0.0
+            ],
+            [
+              -0.0,
+              -0.0,
+              -1.0
+            ]
+          ]
+        }
+      ],
+      "best": {
+        "name": "identity",
+        "score": 0.0,
+        "fixed_error": 0.0,
+        "eigen_error_pm": 0.0,
+        "cosine": 1.0,
+        "output_norm": 3.7416573867739413,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    "reconstruction": {
+      "state": "RECONSTRUCTION",
+      "reconstruction": [
+        2.0,
+        -1.0,
+        3.0
+      ],
+      "residual_before": 3.7416573867739413,
+      "residual_after_transfer": 0.0,
+      "reconstruction_transfer_error": 0.0,
+      "transfer_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "intervention": {
+      "state": "INTERVENTION",
+      "tests": [
+        {
+          "intervention": "recovered_transfer",
+          "input_norm": 3.7416573867739413,
+          "covariance_error": 0.0
+        },
+        {
+          "intervention": "coordinate_reverse",
+          "input_norm": 3.7416573867739413,
+          "covariance_error": 0.0
+        },
+        {
+          "intervention": "global_sign",
+          "input_norm": 3.7416573867739413,
+          "covariance_error": 0.0
+        }
+      ],
+      "best_covariance_error": 0.0
+    },
+    "full_pipeline": {
+      "engine": "HODGE-ENGINE-V2",
+      "status": "PASS",
+      "failures": [],
+      "states": {
+        "observation": {
+          "state": "OBSERVATION",
+          "shape": [
+            3
+          ],
+          "contexts": [
+            "benchmark",
+            "audit_version"
+          ],
+          "norm": 3.7416573867739413,
+          "finite": true,
+          "data_sha256": "ee7f5097ae37ace00a4fa95dcf879678075b80e7fad4782d0570f6582fa4a274"
+        },
+        "representation": {
+          "state": "REPRESENTATION",
+          "representation_type": "finite_chain_complex",
+          "ambient_dimension": 3,
+          "B1_shape": [
+            3,
+            3
+          ],
+          "B2_shape": [
+            3,
+            1
+          ]
+        },
+        "boundary": {
+          "state": "BOUNDARY",
+          "valid": true,
+          "closure_norm": 0.0,
+          "rank_B1": 2,
+          "rank_B2": 1
+        },
+        "decomposition": {
+          "harmonic_dimension": 0,
+          "eigenvalues": [
+            3.0,
+            3.0,
+            3.0
+          ],
+          "L_down_norm": 4.242640687119285,
+          "L_up_norm": 3.0
+        },
+        "harmonic": {
+          "state": "HARMONIC",
+          "harmonic_dimension": 0,
+          "closed_error": 0.0,
+          "coclosed_error": 0.0,
+          "harmonic_error": 0.0,
+          "projection_fraction": 0.0
+        },
+        "residual": {
+          "state": "RESIDUAL",
+          "residual_norm": 3.7416573867739413,
+          "relative_residual": 1.0,
+          "explained_norm": 0.0,
+          "gap_sha256": "ee7f5097ae37ace00a4fa95dcf879678075b80e7fad4782d0570f6582fa4a274"
+        },
+        "transfer": {
+          "candidate_count": 7,
+          "selection_rule": "minimum normalized fixed-point residual",
+          "best": {
+            "name": "identity",
+            "score": 0.0,
+            "fixed_error": 0.0,
+            "eigen_error_pm": 0.0,
+            "cosine": 1.0,
+            "output_norm": 3.7416573867739413
+          }
+        },
+        "reconstruction": {
+          "state": "RECONSTRUCTION",
+          "residual_before": 3.7416573867739413,
+          "residual_after_transfer": 0.0,
+          "reconstruction_transfer_error": 0.0
+        },
+        "intervention": {
+          "state": "INTERVENTION",
+          "tests": [
+            {
+              "intervention": "recovered_transfer",
+              "input_norm": 3.7416573867739413,
+              "covariance_error": 0.0
+            },
+            {
+              "intervention": "coordinate_reverse",
+              "input_norm": 3.7416573867739413,
+              "covariance_error": 0.0
+            },
+            {
+              "intervention": "global_sign",
+              "input_norm": 3.7416573867739413,
+              "covariance_error": 0.0
+            }
+          ],
+          "best_covariance_error": 0.0
+        }
+      },
+      "provenance": {
+        "python": "3.14.8 (main, Oct 18 2026, 13:48:52) [Clang 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 9f872551d",
+        "platform": "Android-17-aarch64-64bit-ELF",
+        "numpy": "2.5.4"
+      },
+      "certificate": {
+        "boundary_closure": 0.0,
+        "harmonic_error": 0.0,
+        "relative_residual": 1.0,
+        "transfer_fixed_error": 0.0,
+        "reconstruction_transfer_error": 0.0,
+        "intervention_best_covariance_error": 0.0
+      },
+      "report_sha256": "65586e2f08f5725cff3627bee92210a265b3b26dde7be585240a6c172019998f"
+    }
+  }
+}
+================================================================
+HODGE ENGINE V2 AUDIT: PASS
