@@ -1,0 +1,152 @@
+{
+  "experiment": "LJX-X009.1",
+  "seed": 20261009,
+  "dataset": {
+    "difficulty": "easy",
+    "problem_file": "feynman-i.12.1.txt",
+    "variables": 2,
+    "train_rows": 2500,
+    "validation_rows": 1000,
+    "test_rows": 1000
+  },
+  "discovery": {
+    "method": "residual_guided_compositional_beam",
+    "beam_width": 18,
+    "expansion_width": 12,
+    "max_depth": 3,
+    "selected_terms": [
+      {
+        "expression": "v0",
+        "coefficient": 0.2425352691135933,
+        "intercept": -0.002567698129912641,
+        "improvement": 0.5508252796598324
+      },
+      {
+        "expression": "(v0*v1)",
+        "coefficient": 0.6682430257155391,
+        "intercept": -0.03381281659886789,
+        "improvement": 0.4465487414174576
+      },
+      {
+        "expression": "((v0*v1)-v0)",
+        "coefficient": 0.23412828128215185,
+        "intercept": 0.039477550918702524,
+        "improvement": 0.21400970647479903
+      },
+      {
+        "expression": "(v0*v1)",
+        "coefficient": 0.08612901769323482,
+        "intercept": -0.0043580921416779776,
+        "improvement": 0.007418207688801535
+      },
+      {
+        "expression": "((v0*v1)-v0)",
+        "coefficient": 0.008115576835192078,
+        "intercept": 0.0013684083613967142,
+        "improvement": 0.00025713695991015027
+      }
+    ],
+    "history": [
+      {
+        "iteration": 0,
+        "residual_before": 0.0,
+        "candidate": "v0",
+        "candidate_residual_fit": 0.6682430257155388,
+        "new_model_error": 0.6682430257155388
+      },
+      {
+        "iteration": 1,
+        "residual_before": 0.5508252796598332,
+        "candidate": "(v0*v1)",
+        "candidate_residual_fit": 0.3317569742844622,
+        "new_model_error": 0.22169428429808125
+      },
+      {
+        "iteration": 2,
+        "residual_before": 1.440762589673454,
+        "candidate": "((v0*v1)-v0)",
+        "candidate_residual_fit": 0.0346629496904388,
+        "new_model_error": 0.007684577823282224
+      },
+      {
+        "iteration": 3,
+        "residual_before": 1.0544948478121843,
+        "candidate": "(v0*v1)",
+        "candidate_residual_fit": 0.03466294969043824,
+        "new_model_error": 0.0002663701344806892
+      },
+      {
+        "iteration": 4,
+        "residual_before": 1.2193346755098524,
+        "candidate": "((v0*v1)-v0)",
+        "candidate_residual_fit": 0.03466294969043662,
+        "new_model_error": 9.233174570538927e-06
+      },
+      {
+        "iteration": 5,
+        "residual_before": 1.2131065669355672,
+        "candidate": "((v0-(v0*v1))-sin(v0))",
+        "candidate_residual_fit": 0.02226333214770163,
+        "new_model_error": 2.0556123224162236e-07
+      }
+    ],
+    "initial_normalized_mse": 1.2190683053753713,
+    "final_train_normalized_mse": 9.233174570538927e-06
+  },
+  "performance": {
+    "train_normalized_mse": 9.233174570538927e-06,
+    "validation_normalized_mse": 9.120517140004275e-06,
+    "blind_test_normalized_mse": 9.410555327045809e-06
+  },
+  "control": {
+    "shuffled_validation_normalized_mse": 1.0045154619072605,
+    "shuffled_selected_terms": [
+      {
+        "expression": "v0",
+        "coefficient": 0.0020184386631025746,
+        "intercept": 0.05015710896191143,
+        "improvement": 0.2190912828010737
+      },
+      {
+        "expression": "(v0/v1)",
+        "coefficient": -0.00034013460837825594,
+        "intercept": 0.0015048326184549916,
+        "improvement": 0.000890312720105646
+      },
+      {
+        "expression": "cos(log(abs(v1)))",
+        "coefficient": -0.004222457566007002,
+        "intercept": -0.000820612143939663,
+        "improvement": 0.0007286291575059334
+      },
+      {
+        "expression": "cos(((v1/v0)+1/(v0)))",
+        "coefficient": 0.006578507798495292,
+        "intercept": -0.0005370882455371773,
+        "improvement": 0.0012303673648662583
+      },
+      {
+        "expression": "1/(v0)",
+        "coefficient": -0.00015335583678959306,
+        "intercept": 0.00323613780261869,
+        "improvement": 0.0012186317254211376
+      },
+      {
+        "expression": "(1/(v1))^2",
+        "coefficient": -1.295545948158154e-06,
+        "intercept": 0.001327104572485401,
+        "improvement": 0.0005744456004072029
+      }
+    ]
+  },
+  "post_hoc": {
+    "true_equation": {
+      "available": true,
+      "type": "Mul",
+      "representation": "x0*x1"
+    },
+    "loaded_after_discovery": true
+  },
+  "status": "DISCOVERY_SUCCESS_CANDIDATE",
+  "sha256": "4874e2c7e081b8f568c5901bf11d373a4064b3b1c69a2524bb9f45a99bea0f13"
+}

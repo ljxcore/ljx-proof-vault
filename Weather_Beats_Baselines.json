@@ -1,0 +1,129 @@
+{
+  "experiment": "LJX-REAL-WEATHER-002",
+  "evidence": "EXPERIMENTAL",
+  "status": "LJX_BEATS_ALL_BASELINES",
+  "station": "KSEQ",
+  "raw_data_sha256": "93509b466f0c0c107887c9cb273ee9e64df1661c60256354e8d2a6173f799811",
+  "reconstructed_pairs": 12021,
+  "split_counts": {
+    "train": 7212,
+    "validation": 2404,
+    "blind_test": 2405
+  },
+  "blind_test_time_range_utc": {
+    "first_prediction_time": "2026-03-19T17:55:00+00:00",
+    "last_prediction_time": "2026-10-23T23:55:00+00:00"
+  },
+  "metrics_degrees_f": {
+    "raw_persistence": {
+      "mae_f": 2.105862785862786,
+      "rmse_f": 2.748783136554925
+    },
+    "calibrated_persistence": {
+      "mae_f": 2.0758807220121698,
+      "rmse_f": 2.7299209798696547
+    },
+    "linear_current_temperature": {
+      "mae_f": 2.04798243278864,
+      "rmse_f": 2.6856192388695073
+    },
+    "multivariate_linear_regression": {
+      "mae_f": 1.202954512869974,
+      "rmse_f": 1.6986396193505897
+    },
+    "ljx_residual_discovery": {
+      "mae_f": 1.1216852359515819,
+      "rmse_f": 1.6207129988463755
+    }
+  },
+  "ljx_relative_improvement_vs_baselines": {
+    "raw_persistence": {
+      "mae_improvement_fraction": 0.46735122369712234,
+      "rmse_improvement_fraction": 0.410388918175033
+    },
+    "calibrated_persistence": {
+      "mae_improvement_fraction": 0.45965814699395524,
+      "rmse_improvement_fraction": 0.4063150505829808
+    },
+    "linear_current_temperature": {
+      "mae_improvement_fraction": 0.45229743283284085,
+      "rmse_improvement_fraction": 0.3965216753777042
+    },
+    "multivariate_linear_regression": {
+      "mae_improvement_fraction": 0.0675580631261794,
+      "rmse_improvement_fraction": 0.045875899523647345
+    }
+  },
+  "baselines_beaten_on_both_metrics": [
+    "raw_persistence",
+    "calibrated_persistence",
+    "linear_current_temperature",
+    "multivariate_linear_regression"
+  ],
+  "training_only_parameters": {
+    "mean_hourly_temperature_change_f": -0.10320299500831946,
+    "linear_current_temperature_intercept_slope": [
+      1.1290260657327333,
+      0.9832387953021275
+    ],
+    "multivariate_ols_coefficients_intercept_then_features": [
+      -4.054392659458291,
+      1.256280009623979,
+      -0.31149744324054424,
+      0.0305843391677593,
+      0.015708296316503497,
+      -0.03745332333237699,
+      -0.1586027375737429,
+      5.553320544613756,
+      -1.6812295087606919,
+      -0.746626157214053
+    ]
+  },
+  "ljx_selected_terms": [
+    {
+      "expression": "v0",
+      "coefficient": 0.9832387953021275,
+      "intercept": 1.1290260657327333,
+      "improvement": 25.277664371894424
+    },
+    {
+      "expression": "(v7+v8)",
+      "coefficient": -1.8482015114200439,
+      "intercept": 0.08758214658762067,
+      "improvement": 0.015406889051763514
+    },
+    {
+      "expression": "((v7+v8)*v7)",
+      "coefficient": 1.614956242138658,
+      "intercept": -0.7976038502807278,
+      "improvement": 0.0029468202955194762
+    },
+    {
+      "expression": "(((v0-v1)/exp(v8))-v4)",
+      "coefficient": 0.07067488779123214,
+      "intercept": 0.43559828767585224,
+      "improvement": 0.0007537138606757594
+    },
+    {
+      "expression": "(v3-v5)",
+      "coefficient": 0.011348347656057372,
+      "intercept": 10.775407253374873,
+      "improvement": 0.000319665834490843
+    },
+    {
+      "expression": "((v3+v4)*v8)",
+      "coefficient": 0.005002420048995972,
+      "intercept": 0.03441586432251435,
+      "improvement": 0.00032410594150096214
+    }
+  ],
+  "protocol": [
+    "All models use the same reconstructed chronological blind-test rows.",
+    "All competing coefficients are fitted on training rows only.",
+    "LJX discovery uses training rows only.",
+    "Validation and blind-test rows are not used to fit any model.",
+    "The blind-test period is not used for model selection."
+  ],
+  "interpretation_limit": "One station and one chronological period do not establish performance at other locations, seasons, or forecast horizons.",
+  "report_sha256": "6b266ad3939b1f5ea000842e2626ccc40ba1736004f4ae51822bcd34bca2bbd5"
+}

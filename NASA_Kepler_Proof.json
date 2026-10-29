@@ -1,0 +1,242 @@
+{
+  "acceptance": {
+    "criteria": [
+      {
+        "criterion": "discovery_relative_residual",
+        "pass": true,
+        "threshold": 0.08,
+        "value": 0.00854457438007248
+      },
+      {
+        "criterion": "holdout_relative_residual",
+        "pass": true,
+        "threshold": 0.12,
+        "value": 0.011612162602770001
+      },
+      {
+        "criterion": "permutation_empirical_p",
+        "pass": true,
+        "threshold": 0.01,
+        "value": 0.000999000999000999
+      },
+      {
+        "criterion": "null_advantage",
+        "pass": true,
+        "threshold": 2.0,
+        "value": 32.538234993022584
+      },
+      {
+        "criterion": "projection_energy_fraction",
+        "note": "non-discriminating",
+        "pass": true,
+        "threshold": 0.5,
+        "value": 0.9999269902486634
+      },
+      {
+        "criterion": "nonzero_residual_class",
+        "note": "vacuous",
+        "pass": true,
+        "threshold": true,
+        "value": true
+      },
+      {
+        "criterion": "not_known_kepler_relation",
+        "pass": false,
+        "threshold": "< 0.95",
+        "value": 0.9996486884533361
+      }
+    ]
+  },
+  "candidate": {
+    "discovery_residual_norm": 1.4052643004616991,
+    "discovery_total_norm": 164.46276174259003,
+    "intercept": -2.048100140401113,
+    "log_space_coefficients": [
+      0.3357598271247834,
+      -0.4979815733879472,
+      0.15526446847354508,
+      -0.0027983195606443466,
+      0.0011261860601718106,
+      -5.171079436919262e-05,
+      0.011520208547376455
+    ],
+    "projection_energy_fraction": 0.9999269902486634,
+    "singular_values": [
+      118.33764470417988,
+      89.76369866326417,
+      60.00007009810426,
+      27.857753499506586,
+      17.7947632763666,
+      17.08768675172888,
+      1.405264300461696
+    ],
+    "smallest_singular_value": 1.405264300461696,
+    "standardization_mean": [
+      2.9156317664139717,
+      -2.029452272201483,
+      -0.11513143170708838,
+      0.010950298548225618,
+      1.3023108655882123,
+      3.062161726128003,
+      6.52040734077072
+    ],
+    "standardization_std": [
+      2.0915285323503063,
+      1.4234169412221647,
+      0.4238148440522334,
+      0.6544280713550991,
+      0.9250148747822796,
+      2.326551700603768,
+      0.677935128464573
+    ],
+    "standardized_coefficients": [
+      0.7022512584484908,
+      -0.7088354079768727,
+      0.06580338649296842,
+      -0.001831298873107728,
+      0.0010417388574313763,
+      -0.00012030783657921686,
+      0.0078099540615043294
+    ],
+    "status": "DERIVED"
+  },
+  "claim_boundary": {
+    "algorithmic_claim": "A low-residual log-space relation was found on the discovery partition and evaluated on host-disjoint holdout data.",
+    "physical_novelty_claim": "REJECTED: matches Kepler III."
+  },
+  "discovery_evaluation": {
+    "data_norm": 164.46276174259003,
+    "relative_residual": 0.00854457438007248,
+    "residual_norm": 1.4052643004616991,
+    "row_count": 3864,
+    "status": "DERIVED"
+  },
+  "finished_utc": "2026-10-29T06:33:54.273604+00:00",
+  "holdout_evaluation": {
+    "data_norm": 106.97581702951977,
+    "relative_residual": 0.011612162602770001,
+    "residual_norm": 1.2422205819109557,
+    "row_count": 1647,
+    "status": "DERIVED"
+  },
+  "known_relation_audit": {
+    "audit_status": "KNOWN_RELATION_REDISCOVERED",
+    "candidate_terms_by_absolute_weight": [
+      {
+        "coefficient": -0.4979815733879472,
+        "feature": "log_semimajor_axis"
+      },
+      {
+        "coefficient": 0.3357598271247834,
+        "feature": "log_period"
+      },
+      {
+        "coefficient": 0.15526446847354508,
+        "feature": "log_stellar_mass"
+      },
+      {
+        "coefficient": 0.011520208547376455,
+        "feature": "log_equilibrium_temperature"
+      },
+      {
+        "coefficient": -0.0027983195606443466,
+        "feature": "log_stellar_radius"
+      },
+      {
+        "coefficient": 0.0011261860601718106,
+        "feature": "log_planet_radius"
+      },
+      {
+        "coefficient": -5.171079436919262e-05,
+        "feature": "log_planet_mass"
+      }
+    ],
+    "kepler_cosine_similarity": 0.9996486884533361,
+    "kepler_third_law_vector": {
+      "log_period": -2.0,
+      "log_semimajor_axis": 3.0,
+      "log_stellar_mass": -1.0
+    },
+    "kepler_threshold": 0.95,
+    "known_relation_rediscovered": true,
+    "reason": "Candidate aligns with Kepler's third law (a^3 ~ M P^2); not novel."
+  },
+  "ljx_controls": {
+    "closure": {
+      "commutator_norm": 0.0,
+      "commutes": true,
+      "content_hash": "631948024ed414284b9e62f9a77edf7220bfb513c18caf5b07a931eb687fe7e7",
+      "interpretation": "Pure wiring control; no scientific operator inferred.",
+      "operators": [
+        "identity_A",
+        "identity_B"
+      ],
+      "scientific_acceptance_role": "CONTROL_ONLY",
+      "status": "COMMUTES"
+    },
+    "orbit": {
+      "deduplicated_count": 1,
+      "interpretation": "Empty transformation set; sign canonicalization only.",
+      "orbit_size": 1,
+      "sign_rule": "first_nonzero_coefficient_positive",
+      "status": "EXPERIMENTAL",
+      "transformation_count": 0
+    },
+    "residual_space": {
+      "after_dimension": 6,
+      "before_dimension": 7,
+      "candidate_nonzero": true,
+      "candidate_residual_norm": 0.9999999999999998,
+      "candidate_status": "NONZERO_RESIDUAL",
+      "interpretation": "Vacuous control: with an empty prior basis every nonzero vector is nonzero. NON-DISCRIMINATING; says nothing about independence from known physics.",
+      "status": "EXPERIMENTAL"
+    }
+  },
+  "permutation_null": {
+    "empirical_p": 0.000999000999000999,
+    "null_advantage": 32.538234993022584,
+    "null_max_relative_residual": 0.39134856178755456,
+    "null_mean_relative_residual": 0.3777974442600778,
+    "null_median_relative_residual": 0.37783927554611907,
+    "null_min_relative_residual": 0.36345286258706894,
+    "null_std_relative_residual": 0.0046821698909777455,
+    "observed_relative_residual": 0.011612162602770001,
+    "permutation_count": 1000,
+    "status": "EXPERIMENTAL"
+  },
+  "provenance": {
+    "dataset_row_count_raw": 5511,
+    "dataset_row_count_usable": 5511,
+    "dataset_sha256": "9a36b6bcf13d7121d9c8324f2278d69d54116a346c3fac4ac3b7125be06fa4a0",
+    "engine_project": "ljx_discovery",
+    "features": [
+      "log_period",
+      "log_semimajor_axis",
+      "log_stellar_mass",
+      "log_stellar_radius",
+      "log_planet_radius",
+      "log_planet_mass",
+      "log_equilibrium_temperature"
+    ],
+    "host_system_count": 4076,
+    "platform": "Android-17-aarch64-64bit-ELF",
+    "python": "3.14.8 (main, Oct 18 2026, 13:48:52) [Clang 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 9f872551d",
+    "seed": 20261003,
+    "source_fields": [
+      "pl_name",
+      "hostname",
+      "pl_orbper",
+      "pl_orbsmax",
+      "st_mass",
+      "st_rad",
+      "pl_rade",
+      "pl_bmasse",
+      "pl_eqt"
+    ],
+    "source_table": "pscomppars"
+  },
+  "result_sha256": "8f8b7fadda1749438ebd220665710db86f52c64bec7241697785042a5bba4f74",
+  "schema": "ljx_nasa_exoplanet_discovery_v3",
+  "started_utc": "2026-10-29T06:33:52.164527+00:00",
+  "status": "KNOWN_RELATION_REDISCOVERED"
+}
