@@ -1,0 +1,23 @@
+{
+  "project": "Relational State Dynamics",
+  "version": "0.5",
+  "checks": {
+    "xor_only_joint_group_suffices": true,
+    "xor_individuals_fail": true,
+    "xor_joint_decoder_exact": true,
+    "constant_target_empty_group": true,
+    "redundant_agents": true,
+    "xor_one_way_cost": true,
+    "bob_bit_one_way_cost": true,
+    "constant_zero_way_cost": true,
+    "union_graph_negative_control": true,
+    "exhaustive_reference_checks_pass": true
+  },
+  "all_pass": true,
+  "exhaustive": {
+    "configurations_checked": 4096,
+    "violations": 0,
+    "status": "PASS"
+  },
+  "sha256_pre_hash": "ca8603f769a273087002fa082c0c08c800d1b7ae0a5c6ec60a79d09d3c970367"
+}

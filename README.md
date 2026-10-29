@@ -17,3 +17,8 @@ This repository contains cryptographic evidence that the LJX Core mathematical e
 
 4. **[Weather Forecasting](./4_Weather_Explained.md)**
    The engine beat standard baselines in real-world NOAA weather prediction.
+
+## 6. RSD Identifiability Engine
+- **File:** `6_RSD_Identifiability_Proof.json`
+- **Status:** `PASS` (4096/4096 exhaustive configurations)
+- **Proof:** Exact finite-state reconstruction and minimal one-way communication bounds. 0 violations.
