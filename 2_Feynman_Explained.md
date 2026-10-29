@@ -2,12 +2,12 @@
 **File:** `Feynman_Physics_Discovery.json`
 
 ### What we did:
-We fed the engine raw data representing the force between two charged particles (a famous test case from the Feynman Lectures on Physics).
+We fed the engine raw data representing a famous test case from the Feynman Lectures on Physics. The engine was not told what the variables were or how they related.
 
 ### What the engine found:
-The engine output: `representation=x0*x1`. It discovered that the force is the product of two variables.
+The engine output: `representation=x0*x1`. It independently discovered the exact multiplicative relationship between the two variables.
 
 ### Why it's a breakthrough:
-This is the exact formula for Coulomb's Law (the force between two charges). The system independently derived the equation from scratch, proving it can discover electromagnetism.
+In this specific Feynman dataset (I.12.1), this recovers the formula for kinetic friction (Force = μ * Normal Force). The system independently derived the exact symbolic equation from scratch. 
 
-**Investor Takeaway:** Our engine doesn't just fit curves; it extracts exact symbolic physics equations.
+**Investor Takeaway:** Our engine doesn't just fit curves; it extracts exact symbolic physics equations from raw data.

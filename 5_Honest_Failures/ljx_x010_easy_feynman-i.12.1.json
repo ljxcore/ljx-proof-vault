@@ -1,0 +1,181 @@
+{
+  "classification": "EXPERIMENTAL",
+  "dataset": {
+    "blind_test": "/data/data/com.termux/files/home/ljx_discovery/external/srsd-benchmark/resource/datasets/srsd-feynman_easy/test/feynman-i.12.1.txt",
+    "blind_test_rows": 1000,
+    "train": "/data/data/com.termux/files/home/ljx_discovery/external/srsd-benchmark/resource/datasets/srsd-feynman_easy/train/feynman-i.12.1.txt",
+    "train_rows": 8000,
+    "validation": "/data/data/com.termux/files/home/ljx_discovery/external/srsd-benchmark/resource/datasets/srsd-feynman_easy/val/feynman-i.12.1.txt",
+    "validation_rows": 1000
+  },
+  "difficulty": "easy",
+  "distractors": [
+    {
+      "index": 2,
+      "source": null,
+      "type": "independent"
+    },
+    {
+      "index": 3,
+      "source": null,
+      "type": "independent"
+    },
+    {
+      "index": 4,
+      "source": null,
+      "type": "independent"
+    },
+    {
+      "index": 5,
+      "source": 0,
+      "type": "correlated"
+    },
+    {
+      "index": 6,
+      "source": 1,
+      "type": "correlated"
+    },
+    {
+      "index": 7,
+      "source": 0,
+      "type": "correlated"
+    }
+  ],
+  "errors": {
+    "blind_test": 0.30475449097433444,
+    "initial_validation": 1.0002972959754288,
+    "train": 1.7385082672934463e-28,
+    "validation": 0.004146984616169921
+  },
+  "experiment": "LJX-X010",
+  "invariance_probe": {
+    "affine_coordinate_change": 3.9468497306535753,
+    "baseline": 0.2327122687737257,
+    "single_coordinate_permutation": 1.74975218510929
+  },
+  "necessity_probe": [
+    {
+      "baseline_error": 0.2327122687737257,
+      "delta": 1.5416906044099037,
+      "necessary": true,
+      "permuted_error": 1.7744028731836294,
+      "variable": 0
+    },
+    {
+      "baseline_error": 0.2327122687737257,
+      "delta": 1.3264429086236367,
+      "necessary": true,
+      "permuted_error": 1.5591551773973624,
+      "variable": 1
+    },
+    {
+      "baseline_error": 0.2327122687737257,
+      "delta": 0.0,
+      "necessary": false,
+      "permuted_error": 0.2327122687737257,
+      "variable": 2
+    },
+    {
+      "baseline_error": 0.2327122687737257,
+      "delta": 0.0,
+      "necessary": false,
+      "permuted_error": 0.2327122687737257,
+      "variable": 3
+    },
+    {
+      "baseline_error": 0.2327122687737257,
+      "delta": 0.0,
+      "necessary": false,
+      "permuted_error": 0.2327122687737257,
+      "variable": 4
+    },
+    {
+      "baseline_error": 0.2327122687737257,
+      "delta": 0.0,
+      "necessary": false,
+      "permuted_error": 0.2327122687737257,
+      "variable": 5
+    },
+    {
+      "baseline_error": 0.2327122687737257,
+      "delta": 0.0,
+      "necessary": false,
+      "permuted_error": 0.2327122687737257,
+      "variable": 6
+    },
+    {
+      "baseline_error": 0.2327122687737257,
+      "delta": 0.0,
+      "necessary": false,
+      "permuted_error": 0.2327122687737257,
+      "variable": 7
+    }
+  ],
+  "problem": "feynman-i.12.1",
+  "protocol": {
+    "beam_width": 12,
+    "blind_test_used_only_after_discovery": true,
+    "correlated_distractors": 3,
+    "independent_distractors": 3,
+    "max_depth": 2,
+    "max_steps": 6,
+    "true_equation_hidden": true
+  },
+  "seed": 20261003,
+  "selected": [
+    {
+      "coefficient": 0.10209009191174927,
+      "complexity": 7,
+      "expression": "(v0*v1)",
+      "intercept": -6.702006978389756e-18
+    }
+  ],
+  "shuffled_control": {
+    "blind_test_error_against_real_target": 1.2065767257113484,
+    "selected_expressions": [
+      "(v1*v3)",
+      "((v3+v5)-v2)",
+      "(v0/v2)",
+      "((v0/v2)*(v1/v2))",
+      "(v3/v5)",
+      "(1/(v4)/v1)"
+    ],
+    "steps": 6,
+    "validation_error": 0.9615009818713253
+  },
+  "trajectory": [
+    {
+      "candidate_train_residual_error": 1.7385134129061105e-28,
+      "candidate_validation_error": 0.2327122687737257,
+      "coefficient": 0.10209009191174927,
+      "complexity": 7,
+      "expression": "(v0*v1)",
+      "intercept": -6.702006978389756e-18,
+      "new_residual_train_mse": 1.811940573242727e-30,
+      "new_validation_error": 0.004146984616169921,
+      "old_validation_error": 1.0002972959754288,
+      "residual_train_mse": 0.010422386866549688,
+      "step": 1,
+      "validation_improvement": 0.9961503113592589
+    },
+    {
+      "candidate_train_residual_error": 1.272628353601788e-30,
+      "candidate_validation_error": 1.2288625801329758,
+      "coefficient": -7.343453865826051e-16,
+      "complexity": 5,
+      "expression": "(-v0)",
+      "intercept": 7.005201337084178e-18,
+      "new_residual_train_mse": 1.2750056037593832e-30,
+      "new_validation_error": 0.004146984616170461,
+      "old_validation_error": 0.004146984616169921,
+      "residual_train_mse": 1.811940573242727e-30,
+      "step": 2,
+      "validation_improvement": -5.403663627667754e-16
+    }
+  ],
+  "true_equation_posthoc": {
+    "available": true,
+    "representation": "x0*x1",
+    "type": "Mul"
+  }
+}

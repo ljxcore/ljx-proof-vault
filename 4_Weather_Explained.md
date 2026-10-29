@@ -1,13 +1,10 @@
-# PROOF 4: Beating Standard Weather Baselines
+# PROOF 4: Weather Forecasting (NOAA Telemetry)
 **File:** `Weather_Beats_Baselines.json`
 
 ### What we did:
-We fed the engine 731 days of real NOAA weather data (San Antonio) and asked it to forecast the next day.
-
-### What the engine found:
-`status=LJX_BEATS_ALL_BASELINES`
+We tested a leakage-aware, one-day-ahead forecasting engine strictly validated on 731 days of historical NOAA telemetry. 
 
 ### Why it's a breakthrough:
-Weather forecasting is notoriously difficult. Our engine not only successfully predicted the weather, but it mathematically outperformed all standard statistical baselines.
+Most weather models suffer from data leakage (secretly peeking at future data to make predictions). Our strict pipeline prevents this. The engine outperformed standard persistence and autoregressive baselines.
 
-**Investor Takeaway:** This engine is ready for commercial deployment in agriculture, energy trading, and logistics.
+**Investor Takeaway:** Our engine can model chaotic, time-series environmental data without the data leakage that plagues standard machine learning models.
