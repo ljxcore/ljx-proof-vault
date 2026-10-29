@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "vertices": 6,
+    "edges": 11,
+    "triangles": 6,
+    "betti": {
+      "0": 1,
+      "1": 0,
+      "2": 0
+    }
+  },
+  "hodge": {
+    "gradient_norm": 1.081837753659746,
+    "curl_norm": 2.0145919535774985,
+    "harmonic_norm": 2.433531478240396e-11
+  },
+  "sheaf": {
+    "dimension": 12,
+    "min_eigenvalue": 0.6369918196705554,
+    "max_eigenvalue": 6.504566235177364
+  },
+  "ramanujan": {
+    "regular": false,
+    "degree": 4.0,
+    "max_nontrivial": 3.713584661871097,
+    "ramanujan_bound": 3.4641016151377544,
+    "is_ramanujan": false
+  }
+}
